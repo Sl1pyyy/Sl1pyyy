@@ -68,7 +68,7 @@ def main():
                 print("Błędna wartość!")
 
         elif wybor == "0":
-            print("Do zobaczenia 👋")
+            print("Elo")
             break
 
         else:
