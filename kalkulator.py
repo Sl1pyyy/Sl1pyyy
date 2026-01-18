@@ -44,10 +44,17 @@ def main():
             try:
                 c = float(input("Podaj stężenie molowe (mol/dm³): "))
                 v = float(input("Podaj objętość roztworu (dm³): "))
-                roztwor = Solution(zwiazek, c, v)
-                print(f"Potrzebna masa substancji: {roztwor.mass:.2f} g")
-            except:
-                print("Błędne dane!")
+
+                n = c * v
+                print(f"Liczba moli substancji w tej objętości:  {wzor}: {n:.4f} mol")
+                
+        
+
+                
+            except ValueError:
+                print("Błąd! Podaj poprawne liczby.")
+            
+
 
         elif wybor == "4":
             print("Reakcje chemiczne:")
