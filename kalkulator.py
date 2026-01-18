@@ -43,16 +43,31 @@ def main():
 
 
         elif wybor == "3":
-            try:
-                c = float(input("Podaj stężenie molowe (mol/dm³): "))
-                v = float(input("Podaj objętość roztworu (dm³): "))
+            stezenie = input("Wybierz stężenie molowe (1) lub procent masowy (2)? ")
+            if stezenie == "1":
+                try:
+                    c = float(input("Podaj stężenie molowe (mol/dm³): "))
+                    v = float(input("Podaj objętość roztworu (dm³): "))
 
-                n = c * v
-                print(f"Liczba moli  {wzor} w tej objętości: {n:.4f} mol")
-                print(f'Masa {wzor}: {n * zwiazek.molar_mass():.2f} g')
+                    n = c * v
+                    print(f"Liczba moli  {wzor} w tej objętości: {n:.4f} mol")
+                    print(f'Masa {wzor}: {n * zwiazek.molar_mass():.2f} g')
 
-            except ValueError:
-                print("Błąd! Podaj poprawne liczby.")
+                except ValueError:
+                    print("Błąd! Podaj poprawne liczby.")
+            elif stezenie == "2":
+                try:
+                    p = float(input("Podaj procent masowy (%): "))
+                    m_roztworu = float(input("Podaj masę roztworu (g): "))
+
+                    m_zwiazku = (p / 100) * m_roztworu
+                    n = m_zwiazku / zwiazek.molar_mass()
+
+                    print(f'Masa {wzor} w roztworze: {m_zwiazku:.2f} g')
+                    print(f'Liczba moli {wzor} w roztworze: {n:.4f} mol')
+
+                except ValueError:
+                    print("Błąd! Podaj poprawne liczby.")
             
 
         elif wybor == "4":
