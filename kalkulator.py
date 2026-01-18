@@ -75,9 +75,6 @@ def main():
         else:
             print("Nieprawidłowy wybór!")
 
-        if input("\nCzy chcesz coś jeszcze zrobić? (tak/nie): ").lower() != "tak":
-            print("Program zakończony.")
-            break
 
 if __name__ == "__main__":
     main()
