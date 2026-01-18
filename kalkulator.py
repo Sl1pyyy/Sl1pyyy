@@ -32,8 +32,13 @@ def main():
 
         elif wybor == "2":
             print("Procent masowy pierwiastków:")
-            for p, proc in zwiazek.percentage_by_mass().items():
-                print(f"{p}: {proc:.2f} %")
+        
+
+            for pierwiastek in zwiazek.occurences:
+                    procent = zwiazek.percentage_by_mass(pierwiastek)
+                    print(f"{pierwiastek}: {procent:.2f} %")
+
+                
 
         elif wybor == "3":
             try:
