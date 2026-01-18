@@ -3,8 +3,6 @@
 from chemlib import Compound, Reaction
 from chemlib.chemistry import Solution
 
-from chemlib import Compound
-from chemlib.chemistry import Solution
 
 def menu():
     print("\nCo chcesz zrobić z tym związkiem?")
