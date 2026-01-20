@@ -95,9 +95,9 @@ def main():
                 try:
                     c = float(input("Podaj stężenie molowe (mol/dm³): "))
                     v = float(input("Podaj objętość roztworu (dm³): "))
-                    roztwor = Solution(zwiazek, c, v)
-                    naglowek(zwiazek)
-                    print(f"Potrzebna masa substancji: {roztwor.mass:.2f} g")
+                    n = c * v  # ilość moli
+                    mass = v * zwiazek.molar_mass()
+                    print(f"Potrzebna masa substancji: {mass:.2f} g")
                 except:
                     print("Błędne dane!")
 
